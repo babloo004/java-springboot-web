@@ -1,0 +1,44 @@
+look lets have a look at MVC in java
+MVC stands for Model - View - Control
+
+Model
+Model is responsible to fetch data from database
+Model is responsible also for updating data in the database
+it gives the data to the Controller
+Model means a POJO
+
+View Technology
+View is a presentation layer
+It concerns about how to display the data to the client
+View receive the request from the client and give the request to the controller
+after model returning the data to the controller, the view will give that data to the client
+there are many view technologies available like JSP(Java Server Pages) , thymeleaf etc
+
+Controller
+Controller is responsible for accepting requests from clients
+The data processing will be happened in the Controller
+Controller is between view technology and Model
+Controller means Servlet
+
+in springboot we can create a Controller using Annotation @Controller
+in SpringBoot we can do multiple URL mappings in a single Controller
+the communication between view Technology and Controllers is done by three objects
+1. HttpSession 2. Model 3. ModalAndView
+
+1. HttpSession
+HttpSession is session scope
+that means we can exchange data between multiple request in a controller
+it is long span. that means the data is available until the session is validate
+We can use session for dealing the user login details
+
+2.Model
+Model Object is request Scope
+that means data is available is only available for one request cycle(until the client receives the data from server for a sent request)
+hence It is short span
+in this we will return the view technology name as string
+
+3. ModelAndView
+ModelAndView is also request Scope
+It is short span
+we can return the object and view file together
+it provides more flexibility compared to the Model
